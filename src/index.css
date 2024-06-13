@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +14,103 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  font-weight: bold;
+}
+
+.red-cell {
+  background-color: rgb(92, 1, 1);
+}
+
+.yellow-cell {
+  background-color: rgb(139, 139, 20);
+}
+
+.green-cell {
+  background-color: green;
+}
+
+.user-row {
+  font-weight: bold;
+  background-color: #e0e0e0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.prediction-row td:first-child {
+  border-left: 2px solid #000;
+}
+
+.prediction-row td:last-child {
+  border-right: 2px solid #000;
+}
+
+tr {
+  border-bottom: 2px solid #000;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh; /* Ensure App takes full height */
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode body {
+  background-color: #121212;
+}
+
+.dark-mode table {
+  border-color: #444;
+}
+
+.dark-mode th, .dark-mode td {
+  border-color: #444;
+}
+
+.dark-mode th {
+  background-color: #333;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #008cba;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.toggle-button:hover {
+  background-color: #005f5f;
+}
+
+.dark-mode .toggle-button {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .toggle-button:hover {
+  background-color: #222;
 }

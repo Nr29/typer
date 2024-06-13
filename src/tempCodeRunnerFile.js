@@ -1,0 +1,1 @@
+<button onClick={toggleDarkMode}>{darkMode ? 'Włącz jasny motyw' : 'Włącz ciemny motyw'}</button>
