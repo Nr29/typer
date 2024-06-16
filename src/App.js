@@ -4,6 +4,7 @@ import Predictions from './components/Predictions';
 import PointsTable from './components/PointsTable';
 import SnakeGame from './components/SnakeGame';
 import { fetchData } from './utils/fetchData';
+import { countryFlags} from './utils/flags';
 import 'firebase/firestore';
 import './components/Leaderboard.css'
 import './App.css';
@@ -71,7 +72,7 @@ function App() {
           {nextMatches.length > 0 ? (
             nextMatches.map((match, index) => (
               <div key={index}>
-                {match.date} {match.time}: {match.team1} {match.score} {match.team2}
+                {match.date} {match.time}: {countryFlags [match.team1]} {match.team1} {match.score} {match.team2} {countryFlags [match.team2]}
               </div>
             ))
           ) : (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { countryFlags } from '../utils/flags';
 
 function Predictions({ predictions, matches }) {
   // Pobierz listę użytkowników z predykcji
@@ -33,7 +34,7 @@ function Predictions({ predictions, matches }) {
       <div>
         {matches.map((match, matchIndex) => (
           <div key={matchIndex} style={{ fontWeight: 'bold', marginBottom: '5px' }}>
-            {match.team1} {match.score} {match.team2}
+            {countryFlags[match.team1]} {match.team1} {match.score} {match.team2} {countryFlags[match.team2]}
           </div>
         ))}
       </div>
