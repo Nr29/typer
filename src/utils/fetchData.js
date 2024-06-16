@@ -38,7 +38,7 @@ const monthMap = {
     const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`);
     const data = await response.json();
     const rows = data.values;
-  
+    
     let currentDate = '';
     const formattedMatches = [];
     const formattedPredictions = [];
@@ -81,14 +81,17 @@ const monthMap = {
       }
     });
   
-    console.log('formattedPredictions:', formattedPredictions);
+    /* console.log('formattedPredictions:', formattedPredictions); */
     setMatches(formattedMatches);
     setPredictions(formattedPredictions);
   
-    // Znalezienie najbliższych meczów
     const now = new Date();
     const nextMatchDate = formattedMatches.find(match => new Date(`${match.date}T${match.time}`) > now)?.date;
     const nearestMatches = formattedMatches.filter(match => match.date === nextMatchDate);
+
+  /*   console.log('now:', now);
+    console.log('nearestMatches:', nearestMatches);
+    console.log('nextMatchDate:', nextMatchDate); */
     setNextMatches(nearestMatches);
   };
   

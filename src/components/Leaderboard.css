@@ -1,0 +1,56 @@
+.leaderboard-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #000000;
+  background-color: #5e5e5e;
+  width: 100%;
+  max-width: 336px;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.leaderboard-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 2px;
+  color: black;
+}
+
+.leaderboard-container ol {
+  padding-left: 0px;
+  margin-left: 0;
+  text-align: center;
+  list-style: none;
+  font-size: 14px;
+}
+
+.leaderboard-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Wyrównanie pionowe */
+  font-size: 12px;
+  margin: 2px 0;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  padding: 5px 0; /* Dodanie paddingu */
+  color: black;
+}
+
+.leaderboard-container li span {
+  display: block;
+}
+
+.leaderboard-container li .rank {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.leaderboard-container li .name {
+  text-align: left;
+  flex-grow: 1; /* Umożliwia zajęcie całej dostępnej szerokości */
+  padding-left: 5px; /* Dodatkowy padding po lewej stronie */
+}
+
+.leaderboard-container li .score {
+  text-align: right;
+  font-size: 12px;
+}

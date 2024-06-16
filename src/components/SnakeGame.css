@@ -1,0 +1,76 @@
+.snake-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  height: auto;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.score {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.canvas {
+  border: 2px solid black;
+  background-color: #a9e000;
+}
+
+.game-over {
+  font-size: 34px;
+  color: red;
+  margin-top: 10px;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.control-buttons button {
+  width: 90px;
+  height: 90px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 40px;
+  margin-left: 40px;
+  background-color: #d2d3cd;
+  color: #006952;
+  border: none;
+  border-radius: 0px;
+  font-size: 12px;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+.control-buttons button:hover {
+  background-color: #45a049;
+}
+
+.restart-button {
+  margin: 10px;
+  padding: 10px 0px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  text-align: center;
+}
+
+.restart-button:hover {
+  background-color: #007B9E;
+}
+
+.nickname-input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}

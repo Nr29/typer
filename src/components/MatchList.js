@@ -1,7 +1,7 @@
 import React from 'react';
 
 function MatchList({ matches }) {
-  console.log('MatchList received matches:', matches);
+   /* console.log('MatchList received matches:', matches); */
   return (
     <div>
       {matches.length === 0 ? (
