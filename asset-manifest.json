@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/typer/static/css/main.d5ac7467.css",
-    "main.js": "/typer/static/js/main.69d3d111.js",
+    "main.js": "/typer/static/js/main.b4d0d6fd.js",
     "index.html": "/typer/index.html",
     "main.d5ac7467.css.map": "/typer/static/css/main.d5ac7467.css.map",
-    "main.69d3d111.js.map": "/typer/static/js/main.69d3d111.js.map"
+    "main.b4d0d6fd.js.map": "/typer/static/js/main.b4d0d6fd.js.map"
   },
   "entrypoints": [
     "static/css/main.d5ac7467.css",
-    "static/js/main.69d3d111.js"
+    "static/js/main.b4d0d6fd.js"
   ]
 }
