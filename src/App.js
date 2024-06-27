@@ -4,6 +4,7 @@ import Predictions from './components/Predictions';
 import PointsTable from './components/PointsTable';
 import SnakeGame from './components/SnakeGame';
 import { fetchData } from './utils/fetchData';
+import { fetchAlert } from './utils/fetchAlert';
 import { countryFlags} from './utils/flags';
 import 'firebase/firestore';
 import './components/Leaderboard.css'
@@ -13,6 +14,7 @@ const SPREADSHEET_ID = '10lJ4gpZHfULHBGKl15ObosxqdmxqQfUjoCZAO1BDRy4';
 const API_KEY = 'AIzaSyAZw3Ivd7yYzwPERuErJ4JDsiad1CJOwBU';
 const RANGE = 'Zbiorczy!A2:BJ100';
 const RANGE_POINTS = 'Punkty!A1:F30';
+const RANGE_ALERT = 'Wyniki!G1:G1';
 
 const fetchLeaderboard = async (SPREADSHEET_ID, API_KEY, RANGE_POINTS) => {
   const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE_POINTS}?key=${API_KEY}`);
@@ -25,6 +27,7 @@ function App() {
   const [nextMatches, setNextMatches] = useState([]);
   const [predictions, setPredictions] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
+  const [alert, setAlert] = useState('');
   const [darkMode, setDarkMode] = useState(false);
   const [currentView, setCurrentView] = useState('typer');
 
@@ -43,6 +46,9 @@ function App() {
   useEffect(() => {
     fetchData(SPREADSHEET_ID, API_KEY, RANGE, setMatches, setPredictions, setNextMatches);
     fetchLeaderboard(SPREADSHEET_ID, API_KEY, RANGE_POINTS).then(data => setLeaderboard(data));
+    fetchAlert(SPREADSHEET_ID, API_KEY, RANGE_ALERT).then(data => {
+      if (data && data.length > 0 && data[0].length > 0) {
+        setAlert(data[0][0]);}});
   }, []);
 
   const today = new Date().toISOString().split('T')[0];
@@ -59,8 +65,17 @@ function App() {
       EURO 2024 Typer Master Edition
       <button onClick={showSnake}>🐍</button>
       </h1>
+    
       {currentView === 'typer' && (
         <>
+          <hr></hr>
+          {alert && (
+            <div className="alert">
+              <h2>
+                <strong>{alert}</strong>
+                </h2>
+            </div>
+          )}
           <hr />
           <h3>Dzisiejsze mecze</h3>
           <MatchList matches={todayMatches} />
