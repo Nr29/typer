@@ -13,7 +13,7 @@ import './App.css';
 const SPREADSHEET_ID = '10lJ4gpZHfULHBGKl15ObosxqdmxqQfUjoCZAO1BDRy4';
 const API_KEY = 'AIzaSyAZw3Ivd7yYzwPERuErJ4JDsiad1CJOwBU';
 const RANGE = 'Zbiorczy!A2:BJ100';
-const RANGE_POINTS = 'Punkty!A1:F30';
+const RANGE_POINTS = 'Punkty!A1:G30';
 const RANGE_ALERT = 'Wyniki!G1:G1';
 
 const fetchLeaderboard = async (SPREADSHEET_ID, API_KEY, RANGE_POINTS) => {
